@@ -33,5 +33,8 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+void free_the_stack(stack_t *stack);
+void run_instruct(stack_t **stack, unsigned int index_line, char *command);
+
 
 #endif /*MONTY _HEADER*/
