@@ -26,9 +26,6 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 
-/* GLOBAL VARIABLE */
-
-extern stack_t *stack;
 
 /**
  * struct instruction_s - opcode and its function
@@ -41,14 +38,14 @@ extern stack_t *stack;
 typedef struct instruction_s
 {
 	char *opcode;
-	void (*f)(char *parameter);
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void free_the_stack();
-int run_instruct(char *command, char *parameter);
-void push_op(char *parameter);
-void pall_op(char *parameter);
-void pint_op(char *parameter);
+void free_the_stack(stack_t *stack);
+int run_instruct(stack_t **stack, char *command, unsigned int line_number);
+void push_op(stack_t **stack, unsigned int line_number);
+void pall_op(stack_t **stack, unsigned int line_number);
+void pint_op(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_HEADER */
 

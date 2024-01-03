@@ -3,13 +3,14 @@
 /**
  * run_instruct - executes Monty bytecode instruction based on parameters
  *
+ * @stack: pointer to top of the stack
  * @command: (opcode) to be executed
- * @parameter: parameter for the instruction
+ * @line_number: current line number executed
  *
- * Return: EXIT_FAILURE on failure
+ * Return: EXIT_FAILURE if failure
  */
 
-int run_instruct(char *command, char *parameter)
+int run_instruct(stack_t **stack, char *command, unsigned int line_number)
 {
 	int index;
 
@@ -24,7 +25,7 @@ int run_instruct(char *command, char *parameter)
 	{
 		if (strcmp(command, instructions[index].opcode) == 0)
 		{
-			instructions[index].f(parameter);
+			instructions[index].f(stack, line_number);
 			return (EXIT_SUCCESS);
 		}
 	}

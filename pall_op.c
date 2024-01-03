@@ -1,15 +1,15 @@
 #include "monty.h"
 
 /**
- * pall_op - prints all values on stack, starting from top of the stack
- * @parameter: unused parameter
+ * pall_op - prints all the values on the stack, starting from the top.
  *
+ * @stack: a pointer to the top of the stack.
+ * @line_number: current line number
  */
-
-void pall_op(char *parameter)
+void pall_op(stack_t **stack, unsigned int line_number)
 {
-	stack_t *current_node = stack;
-	(void) parameter;
+	stack_t *current_node = *stack;
+	(void) line_number;
 
 	while (current_node != NULL)
 	{
