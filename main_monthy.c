@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 	char *line_buffer = NULL, *command, *parameter;
 	ssize_t read;
 	size_t lenght_buff = 0;
+	int ret=EXIT_SUCCESS;
 
 	if (argc != 2)
 	{
@@ -43,10 +44,16 @@ int main(int argc, char *argv[])
 			continue;
 		}
 		parameter = strtok(NULL, " \t\n");
-		run_instruct(&stack, index_line, command, parameter);
-		printf("index_line=%2d line_buffer=<%s>\tcommand=<%s>\tparameter=<%s>\n",index_line,line_buffer,command,parameter);
+		ret=run_instruct(command, parameter);
+		if (ret != EXIT_SUCCESS)
+		{
+			fprintf(stderr, "L%d: unknown instruction %s\n", index_line, command);
+			break;
+		}
 	}
 	free(line_buffer);
+	free_the_stack();
 	fclose(file);
-	return (EXIT_SUCCESS);
+	return (ret);
 }
+
