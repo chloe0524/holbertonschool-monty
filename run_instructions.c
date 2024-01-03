@@ -6,29 +6,26 @@
  * @stack: pointer to top of the stack.
  * @index_line: current line number executed.
  * @command: (opcode) to be executed.
+ * @parameter: parameter for the instruction (if any).
  */
 
-void run_instruct(stack_t **stack, unsigned int index_line, char *command)
+void run_instruct(stack_t **stack, unsigned int index_line, char *command, char *parameter)
 {
-	int current_position = 0;
+	int index;
 
-	/* TO ADD: instruction_t -> instruction or instruct {"push", op_push}; ...*/
+	instruction_t instructions[] = {
+		{"push", push_op},
+	};
 
-	while (instruct[current_position].command != NULL)
+	for (index = 0; instructions[index].opcode; ++index)
 	{
-		/* check command if it matches current instruction */
-		if (strcmp(command, instruct[current_position].command) == 0)
+		if (strcmp(command, instructions[index].opcode) == 0)
 		{
-			/* exec function associated with matching opcode/command */
-			instruct[current_position].f(stack, index_line);
+			instructions[index].f(stack, index_line);
 			return;
 		}
-		current_position++;
 	}
-	/* else, no matching command/opcode: error message and exit */
-	fprintf(stderr, "L%d: unknown instruction %s\n", index_line, command);
-	free(line_buffer);
-	close(file);
-	free_the_stack(stack);
-	exit(EXIT_FAILURE);
+
+	error_instruct(stack, index_line, command, parameter, NULL);
 }
+

@@ -1,4 +1,4 @@
-#include "monthy.h"
+#include "monty.h"
 
 /**
  * free_the_stack - free memory allocated for stack
@@ -18,3 +18,4 @@ void free_the_stack(stack_t *stack)
 		free(current_node);
 	}
 }
+

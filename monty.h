@@ -1,7 +1,14 @@
 #ifndef MONTY_HEADER
 #define MONTY_HEADER
 
-/*DATA STRUCTURES*/
+#include <stdlib.h>
+#include <stdio.h>
+#include <fcntl.h>
+#include <string.h>
+#include <unistd.h>
+#include <ctype.h>
+
+/* DATA STRUCTURES */
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -19,6 +26,10 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 
+/* GLOBAL VARIABLE */
+
+extern stack_t *stack;
+
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -34,7 +45,9 @@ typedef struct instruction_s
 } instruction_t;
 
 void free_the_stack(stack_t *stack);
-void run_instruct(stack_t **stack, unsigned int index_line, char *command);
+void run_instruct(stack_t **stack, unsigned int index_line, char *command, char *parameter);
+void error_instruct(stack_t **stack, unsigned int index_line, char *command, char *line_buffer, FILE *file);
+int is_digit(char *opcode);
+void push_op(stack_t **stack, unsigned int line_number);
 
-
-#endif /*MONTY _HEADER*/
+#endif /* MONTY_HEADER */

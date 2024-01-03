@@ -10,12 +10,13 @@
  *
  */
 
+stack_t *stack = NULL;
+
 int main(int argc, char *argv[])
 {
-	int file;
+	FILE * file;
 	unsigned int index_line = 0;
-	stack_t *stack = NULL;
-	char *line_buffer = NULL, *command;
+	char *line_buffer = NULL, *command, *parameter;
 	ssize_t read;
 	size_t lenght_buff = 0;
 
@@ -25,7 +26,7 @@ int main(int argc, char *argv[])
 		return (EXIT_FAILURE);
 	}
 
-	file = open(argv[1], O_RDONLY);
+	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
@@ -36,15 +37,16 @@ int main(int argc, char *argv[])
 	{
 		index_line++;
 
-		command = strtok(line_buffer, " \n");
+		command = strtok(line_buffer, " \t\n");
 		if (command == NULL)
 		{
 			continue;
 		}
-		instruc_exec(&stack, index_line);
+		parameter = strtok(NULL, " \t\n");
+		run_instruct(&stack, index_line, command, parameter);
+		printf("index_line=%2d line_buffer=<%s>\tcommand=<%s>\tparameter=<%s>\n",index_line,line_buffer,command,parameter);
 	}
 	free(line_buffer);
-	close(file);
-	free_the_stack(&stack);
+	fclose(file);
 	return (EXIT_SUCCESS);
 }
