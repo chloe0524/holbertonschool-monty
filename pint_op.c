@@ -9,6 +9,6 @@ void pint_op(char *parameter)
 {
 	(void) parameter;
 
-	printf("%d\n",stack->n);
+	printf("%d\n", stack->n);
 }
 

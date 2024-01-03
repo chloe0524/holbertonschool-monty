@@ -9,6 +9,4 @@
 void nop_op(char *parameter)
 {
 	(void) parameter;
-
-	return;
 }
