@@ -3,11 +3,9 @@
 /**
  * free_the_stack - free memory allocated for stack
  *
- * @stack: pointer to top of the stack
- *
  */
 
-void free_the_stack(stack_t *stack)
+void free_the_stack(void)
 {
 	stack_t *current_node = NULL;
 
@@ -18,4 +16,3 @@ void free_the_stack(stack_t *stack)
 		free(current_node);
 	}
 }
-
