@@ -9,23 +9,26 @@
  * @parameter: parameter for the instruction (if any).
  */
 
-void run_instruct(stack_t **stack, unsigned int index_line, char *command, char *parameter)
+int run_instruct(char *command, char *parameter)
 {
 	int index;
 
 	instruction_t instructions[] = {
 		{"push", push_op},
+		{"pall", pall_op},
+		{"pint", pint_op},
+		{NULL, NULL}
 	};
 
-	for (index = 0; instructions[index].opcode; ++index)
+	for (index = 0; instructions[index].opcode != NULL ; ++index)
 	{
 		if (strcmp(command, instructions[index].opcode) == 0)
 		{
-			instructions[index].f(stack, index_line);
-			return;
+			instructions[index].f(parameter);
+			return EXIT_SUCCESS;
 		}
 	}
-
-	error_instruct(stack, index_line, command, parameter, NULL);
+	return EXIT_FAILURE;
 }
+
 
