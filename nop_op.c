@@ -2,11 +2,11 @@
 
 /**
  * nop_op - does nothing
- * @parameter: unused parameter
- *
+ * @stack: unused parameter
+ * @line_number: unused parameter
  */
-
-void nop_op(char *parameter)
+void nop_op(stack_t **stack, unsigned int line_number)
 {
-	(void) parameter;
+	(void)stack;
+	(void)line_number;
 }
