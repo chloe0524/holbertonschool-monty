@@ -8,14 +8,14 @@
  */
 void pop_op(stack_t **stack, unsigned int line_number)
 {
-    if (*stack == NULL)
-    {
-        fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
-        exit(EXIT_FAILURE);
-    }
-    stack_t *now_node = *stack;
-    *stack = (*stack)->next;
-    free(now_node);
+	if (*stack == NULL)
+	{
+		fprintf(stderr, "L<line_number>: can't pop an empty stack", line_number);
+		exit(EXIT_FAILURE);
+	}
+	stack_t *now_node = *stack;
+	*stack = (*stack)->next;
+	free(now_node);
 }
 
 
