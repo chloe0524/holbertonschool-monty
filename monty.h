@@ -46,6 +46,7 @@ int run_instruct(stack_t **stack, char *command, unsigned int line_number);
 void push_op(stack_t **stack, unsigned int line_number);
 void pall_op(stack_t **stack, unsigned int line_number);
 void pint_op(stack_t **stack, unsigned int line_number);
+void nop_op(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_HEADER */
 
