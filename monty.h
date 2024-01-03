@@ -41,13 +41,14 @@ extern stack_t *stack;
 typedef struct instruction_s
 {
 	char *opcode;
-	void (*f)(stack_t **stack, unsigned int line_number);
+	void (*f)(char *parameter);
 } instruction_t;
 
-void free_the_stack(stack_t *stack);
-void run_instruct(stack_t **stack, unsigned int index_line, char *command, char *parameter);
-void error_instruct(stack_t **stack, unsigned int index_line, char *command, char *line_buffer, FILE *file);
-int is_digit(char *opcode);
-void push_op(stack_t **stack, unsigned int line_number);
+void free_the_stack();
+int run_instruct(char *command, char *parameter);
+void push_op(char *parameter);
+void pall_op(char *parameter);
+void pint_op(char *parameter);
 
 #endif /* MONTY_HEADER */
+
