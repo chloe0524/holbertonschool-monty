@@ -42,6 +42,7 @@ typedef struct instruction_s
 } instruction_t;
 
 void free_the_stack(stack_t *stack);
+int only_digits(char *string);
 int run_instruct(stack_t **stack, char *command, unsigned int line_number);
 void push_op(stack_t **stack, unsigned int line_number);
 void pall_op(stack_t **stack, unsigned int line_number);
