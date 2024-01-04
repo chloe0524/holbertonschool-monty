@@ -15,8 +15,14 @@ void add_op(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	(*stack)->n = (*stack)->next->n;
-	(*stack)->n = (*stack)->n + (*stack)->n;
+	/* Adding top n value with next n */
+	(*stack)->n = (*stack)->next->n + (*stack)->n;
+	/* Replacing top next with "next of next" address */
+	(*stack)->next = (*stack)->next->next;
+	/* New next prev : top stack */
+	(*stack)->next->prev = (*stack);
+	/* Freeing useless node */
+	free(stack_temp);
 
 }
 
