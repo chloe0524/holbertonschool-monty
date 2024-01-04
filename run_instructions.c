@@ -22,7 +22,7 @@ int run_instruct(stack_t **stack, char *command, unsigned int line_number)
 		{"nop", nop_op},
 		{"swap", swap_op},
 		{"add", add_op},
-		{"NULL", NULL},
+		{NULL, NULL},
 	};
 
 	for (index = 0; instructions[index].opcode != NULL ; ++index)
