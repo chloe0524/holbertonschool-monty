@@ -18,7 +18,10 @@ int run_instruct(stack_t **stack, char *command, unsigned int line_number)
 		{"push", push_op},
 		{"pall", pall_op},
 		{"pint", pint_op},
-		{NULL, NULL}
+		{"pop", pop_op},
+		{"nop", nop_op},
+		{"swap", swap_op},
+		{"NULL", NULL},
 	};
 
 	for (index = 0; instructions[index].opcode != NULL ; ++index)
