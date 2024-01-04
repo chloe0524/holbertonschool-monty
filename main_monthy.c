@@ -14,13 +14,13 @@
 
 int main(int argc, char *argv[])
 {
-	FILE *file;
+	FILE *file, *dump = NULL;
 	unsigned int index_line = 0;
 	char *line_buffer = NULL, *command;
 	ssize_t read;
-	size_t Length_buff = 0;
+	size_t length_buff = 0;
 	int ret = EXIT_SUCCESS;
-	stack_t *stack;
+	stack_t *stack = NULL;
 
 	if (argc != 2)
 	{
@@ -34,25 +34,26 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		return (EXIT_FAILURE);
 	}
-
-	stack = NULL;
-	while ((read = getline(&line_buffer, &Length_buff, file)) != EOF)
+	while ((read = getline(&line_buffer, &length_buff, file)) != EOF)
 	{
 		index_line++;
 		command = strtok(line_buffer, " \t\n");
 		if (command == NULL)
 			continue;
 		ret = run_instruct(&stack, command, index_line);
-
 		if (ret != EXIT_SUCCESS)
 		{
 			fprintf(stderr, "L%d: unknown instruction %s\n", index_line, command);
 			break;
 		}
+		dump_stack(&stack, &dump, index_line, command);
 	}
 	free_the_stack(stack);
 	free(line_buffer);
 	fclose(file);
+	if (dump)
+		fclose(dump);
 	return (ret);
 }
+
 
