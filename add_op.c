@@ -31,5 +31,5 @@ void add_op(stack_t **stack, unsigned int line_number)
 	/* Freeing useless previous top node */
 	free(stack_temp);
 }
-}
+
 
