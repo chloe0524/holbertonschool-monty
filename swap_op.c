@@ -9,7 +9,7 @@
 
 void swap_op(stack_t **stack, unsigned int line_number)
 {
-	int tp = 0;
+	int number = 0;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
@@ -17,8 +17,8 @@ void swap_op(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	tp = (*stack)->n;
+	number = (*stack)->n;
 	(*stack)->n = (*stack)->next->n;
-	(*stack)->next->n = tp;
+	(*stack)->next->n = number;
 }
 
