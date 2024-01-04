@@ -41,8 +41,11 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+void dump_stack(stack_t **stack, FILE **dump, unsigned int line_number, char *command);
+
 void free_the_stack(stack_t *stack);
 int only_digits(char *string);
+
 int run_instruct(stack_t **stack, char *command, unsigned int line_number);
 void push_op(stack_t **stack, unsigned int line_number);
 void pall_op(stack_t **stack, unsigned int line_number);
