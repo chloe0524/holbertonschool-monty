@@ -10,6 +10,7 @@
 void add_op(stack_t **stack, unsigned int line_number)
 {
 	stack_t *stack_temp;
+
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%i: can't add, stack too short\n", line_number);
