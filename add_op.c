@@ -10,14 +10,14 @@
 void add_op(stack_t **stack, unsigned int line_number)
 {
 	stack_t *stack_temp;
-	
+
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%i: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	stack_temp = (*stack)->next;
-	
+
 	/* Adding top n value with next n */
 	(*stack)->n = (*stack)->next->n + (*stack)->n;
 	/* Replacing top next with "next of next" address */
@@ -26,6 +26,5 @@ void add_op(stack_t **stack, unsigned int line_number)
 	(*stack)->next->prev = (*stack);
 	/* Freeing useless node */
 	free(stack_temp);
-
 }
 
