@@ -15,13 +15,17 @@ void pchar_op(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%i: can't pchar, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
+
 	ascii_char = (*stack)->n;
-	if ((*stack)->n < 0 || (*stack)->n > 127)
+
+	if (ascii_char < 0 || ascii_char > 127)
 	{
 		fprintf(stderr, "L%i: can't pchar, value out of range\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	printf("%c\n", ascii_char);
+
+	putchar(ascii_char);
+	putchar('\n');
 	*stack = (*stack)->next;
 }
 
