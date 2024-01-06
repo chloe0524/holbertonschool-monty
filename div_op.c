@@ -14,7 +14,7 @@ void div_op(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "L%i: can't sub, stack too short\n", line_number);
+		fprintf(stderr, "L%i: can't div, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	stack_temp = *stack;
