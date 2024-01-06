@@ -1,3 +1,5 @@
+#define DEFINE_GLOBALS
+
 #include "monty.h"
 
 /**
@@ -53,3 +55,4 @@ int main(int argc, char *argv[])
 	fclose(file);
 	return (ret);
 }
+
