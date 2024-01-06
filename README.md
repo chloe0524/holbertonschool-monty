@@ -14,11 +14,9 @@ This is an interpreter for the Monty programming language.
 ## Files :open_file_folder:
 
 - `monty.h`: Header file containing function prototypes, data structures, and necessary includes.
-- `monty.c`: Main file with the `main` function for Monty interpreter execution.
-- `instructions.c`: Contains functions for each Monty bytecode command.
-- `stack_operations.c`: Implements stack-related operations.
+- `main_monthy.c`: Main file with the `main` function for Monty interpreter execution.
 - `run_instruct.c`: Executes Monty bytecode instructions based on parameters.
-- `Makefile`: Makefile for compilation.
+
 
 ### Compilation
 ````
@@ -53,7 +51,10 @@ pall
 |  pop    | Removes the top element of the stack. |
 |  nop    | Does nothing. |
 |  swap   | Swaps the top two elements of the stack. |
-|  add    | Adds the top two elements of the stack. |
+|  sub    |  subtracts top element of the stack from the second top element of the stack |
+|  mul   | multiplies second top element of the stack with top element of the stack |
+|  mod    | Adds the top two elements of the stack. |
+|  div    | computes remainder of division, second top by top stack element. |
 
 ## Authors
 - Chloe Correia
