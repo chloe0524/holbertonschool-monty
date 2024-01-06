@@ -25,18 +25,19 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "USAGE: monty file\n");
 		return (EXIT_FAILURE);
 	}
+
 	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		return (EXIT_FAILURE);
 	}
+
 	stack = NULL;
 	while ((read = getline(&line_buffer, &Length_buff, file)) != EOF)
 	{
 		index_line++;
 		command = strtok(line_buffer, " \t\n");
-
 		if (command == NULL)
 			continue;
 		ret = run_instruct(&stack, command, index_line);
