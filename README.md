@@ -11,12 +11,14 @@ This is an interpreter for the Monty programming language.
 - Each Monty bytecode command is implemented as a separate function.
 - The `main` function reads Monty bytecode from a file, tokenizes the commands, and executes them accordingly.
 
-|  Requirements |
-| Language: C |
-| OS: Ubuntu 20.04 LTS |
-| Compiler: gcc |
-| Style guidelines: Betty style |
-| Editors: vi, vim, emacs |
+| Requirements           |                    |
+|------------------------|--------------------|
+| Language               | C                  |
+| OS                     | Ubuntu 20.04 LTS   |
+| Compiler               | gcc                |
+| Style guidelines       | Betty style        |
+| Editors                | vi, vim, emacs     |
+
 
 ## Files :open_file_folder:
 
