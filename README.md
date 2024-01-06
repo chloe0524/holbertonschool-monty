@@ -1,4 +1,4 @@
-![1fa12b15f8d04325ba4e94934e93ea4d](https://github.com/chloe0524/holbertonschool-monty/assets/127857895/73e6d8e3-247b-43bf-ad87-487bd878856b)
+![Black_and_White_Modern_Thunder_Twitch_Panel-removebg-preview](https://github.com/chloe0524/holbertonschool-monty/assets/127857895/d89c47a8-01df-4149-8e31-bbe7f1e84ccc)
 
 # Monty Language Interpreter
 
