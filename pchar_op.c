@@ -24,6 +24,6 @@ void pchar_op(stack_t **stack, unsigned int line_number)
 
 	putchar(ascii_char);
 	putchar('\n');
-	*stack = (*stack)->n->next;
+	*stack = (*stack)->next;
 }
 
