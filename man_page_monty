@@ -77,7 +77,7 @@ Header file containing function prototypes, data structures, and necessary inclu
 Main file with the \fBmain\fR function for Monty interpreter execution.
 
 .TP
-\fBrun_instruct.c\fR
+\fBrun_instructions.c\fR
 Executes Monty bytecode instructions.
 
 .SH EXAMPLES
