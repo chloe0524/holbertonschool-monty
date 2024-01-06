@@ -24,6 +24,7 @@ int run_instruct(stack_t **stack, char *command, unsigned int line_number)
 		{"add", add_op},
 		{"sub", sub_op},
 		{"div", div_op},
+		{"mod", mod_op},
 		{NULL, NULL},
 	};
 
