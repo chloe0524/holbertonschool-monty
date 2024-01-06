@@ -1,0 +1,76 @@
+.TH MONTY 1 "January 2024" "Monty Language Interpreter Manual"
+
+.SH NAME
+monty \- Monty Language Interpreter
+
+.SH SYNOPSIS
+.B monty
+[\fIfile\fR]
+
+.SH DESCRIPTION
+The \fBmonty\fR command is an interpreter for the Monty programming language.
+
+.SH COMMAND-LINE OPTIONS
+.TP
+\fBfile.m\fR
+The Monty bytecode file to be interpreted.
+
+.SH USAGE
+.B ./monty bytecodes/\fIfile.m\fR
+
+.SH Monty Bytecode Commands
+
+.TP
+\fBpush\fR
+Pushes an integer onto the stack.
+
+.TP
+\fBpall\fR
+Prints all the values on the stack, starting from the top.
+
+.TP
+\fBpint\fR
+Prints the value at the top of the stack.
+
+.TP
+\fBpop\fR
+Removes the top element of the stack.
+
+.TP
+\fBnop\fR
+Does nothing.
+
+.TP
+\fBswap\fR
+Swaps the top two elements of the stack.
+
+.TP
+\fBadd\fR
+Adds the top two elements of the stack.
+
+.SH IMPLEMENTATION DETAILS
+Each Monty bytecode command is implemented as a separate function. The \fBmain\fR function reads Monty bytecode from a file, tokenizes the commands, and executes them accordingly.
+
+.SH FILES
+.TP
+\fBmonty.h\fR
+Header file containing function prototypes, data structures, and necessary includes.
+
+.TP
+\fBmain_monty.c\fR
+Main file with the \fBmain\fR function for Monty interpreter execution.
+
+.TP
+\fBrun_instruct.c\fR
+Executes Monty bytecode instructions.
+
+.SH EXAMPLES
+Compile the interpreter:
+.BR gcc -Wall -Werror -Wextra -pedantic *.c -o monty
+
+Run the interpreter with a Monty bytecode file:
+.BR ./monty bytecodes/file.m
+
+.SH AUTHORS
+Chloe Correia, Clement Mascret
+
