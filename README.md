@@ -1,4 +1,6 @@
-![Black and White Modern Thunder Twitch Panel](https://github.com/chloe0524/holbertonschool-monty/assets/127857895/ecd0988e-2c7d-4409-bd91-b8cc501ea8c1)
+![Design sans titre (1)](https://github.com/chloe0524/holbertonschool-monty/assets/127857895/6af77bf9-2116-489a-826c-6c67aba9af9f)
+
+
 # Monty Language Interpreter
 
 
