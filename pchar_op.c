@@ -21,7 +21,7 @@ void pchar_op(stack_t **stack, unsigned int line_number)
 
 	if (!isascii(ascii_char))
 	{
-		fprintf(stderr, "L%u: can't pchar, value out of ASCII range\n", line_number);
+		fprintf(stderr, "L%u: can't pchar, value out of range\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
