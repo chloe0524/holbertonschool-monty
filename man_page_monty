@@ -65,7 +65,7 @@ Divides the second top element of the stack by the top element.
 Multiplies the second top element of the stack with the top element.
 
 .SH IMPLEMENTATION DETAILS
-Each Monty bytecode command is implemented as a separate function. The \fBmain\fR function reads Monty bytecode from a file, tokenizes the commands, and executes them accordingly.
+Each Monty bytecode command is implemented as a separate function. The \fBmain\fR function reads Monty bytecode from a file.
 
 .SH FILES
 .TP
