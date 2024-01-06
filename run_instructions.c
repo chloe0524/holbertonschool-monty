@@ -26,7 +26,6 @@ int run_instruct(stack_t **stack, char *command, unsigned int line_number)
 		{"div", div_op},
 		{"mod", mod_op},
 		{"mul", mul_op},
-		{"pchar", pchar_op},
 		{NULL, NULL},
 	};
 
