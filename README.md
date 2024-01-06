@@ -1,6 +1,8 @@
+![Design sans titre (1)](https://github.com/chloe0524/holbertonschool-monty/assets/127857895/6af77bf9-2116-489a-826c-6c67aba9af9f)
 
 
 # Monty Language Interpreter
+
 
 This is an interpreter for the Monty programming language.
 
