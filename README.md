@@ -16,7 +16,17 @@ This is an interpreter for the Monty programming language.
 - `monty.h`: Header file containing function prototypes, data structures, and necessary includes.
 - `main_monty.c`: Main file with the `main` function for Monty interpreter execution.
 - `run_instructions.c`: Executes Monty bytecode instructions based on parameters.
-
+- `push.c`: Implements the push command
+- `pall.c`: Implements the pall command
+- `pint.c`: Implements the pint command
+- `pop.c`: Implements the pop command
+- `nop.c`: Implements the nop command
+- `swap.c`: Implements the swap command
+- `add.c`: Implements the add command
+- `sub.c`: Implements the sub command
+- `mod.c`: Implements the mod command
+- `div.c`: Implements the div command
+- `mul.c`: Implements the mul command
 
 ### Compilation
 ````
