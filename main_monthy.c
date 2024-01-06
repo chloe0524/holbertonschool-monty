@@ -34,8 +34,7 @@ int main(int argc, char *argv[])
 	stack = NULL;
 	while ((read = getline(&line_buffer, &Length_buff, file)) != EOF)
 	{
-		index_line++;
-		
+		index_line++;	
 		command = strtok(line_buffer, " \t\n");
 		if (command == NULL || command[0] == '#')
 			continue;
