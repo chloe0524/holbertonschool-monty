@@ -25,7 +25,7 @@ void mod_op(stack_t **stack, unsigned int line_number)
 
 	stack_temp = *stack;
 
-	(*stack)->next->n = (*stack)->next->n % (*stack)->n;
+	(*stack)->next->n = (*stack)->next->n %= (*stack)->n;
 	*stack = (*stack)->next;
 	(*stack)->prev = NULL;
 	free(stack_temp);
