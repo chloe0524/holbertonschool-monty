@@ -23,6 +23,7 @@ int run_instruct(stack_t **stack, char *command, unsigned int line_number)
 		{"swap", swap_op},
 		{"add", add_op},
 		{"sub", sub_op},
+		{"div", div_op},
 		{NULL, NULL},
 	};
 
