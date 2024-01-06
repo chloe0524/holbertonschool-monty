@@ -15,7 +15,7 @@ This is an interpreter for the Monty programming language.
 
 - `monty.h`: Header file containing function prototypes, data structures, and necessary includes.
 - `main_monthy.c`: Main file with the `main` function for Monty interpreter execution.
-- `run_instruct.c`: Executes Monty bytecode instructions based on parameters.
+- `run_instructions.c`: Executes Monty bytecode instructions based on parameters.
 
 
 ### Compilation
