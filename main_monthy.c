@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 		index_line++;
 		
 		command = strtok(line_buffer, " \t\n");
-		if (command == NULL || command == '#')
+		if (command == NULL || command[0] == '#')
 			continue;
 		ret = run_instruct(&stack, command, index_line);
 
