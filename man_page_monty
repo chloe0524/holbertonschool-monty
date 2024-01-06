@@ -21,47 +21,47 @@ The Monty bytecode file to be interpreted.
 .SH Monty Bytecode Commands
 
 .TP
-\fBpush\fR
+\fBpush_op\fR
 Pushes an integer onto the stack.
 
 .TP
-\fBpall\fR
+\fBpall_op\fR
 Prints all the values on the stack, starting from the top.
 
 .TP
-\fBpint\fR
+\fBpint_op\fR
 Prints the value at the top of the stack.
 
 .TP
-\fBpop\fR
+\fBpop_op\fR
 Removes the top element of the stack.
 
 .TP
-\fBnop\fR
+\fBnop_op\fR
 Does nothing.
 
 .TP
-\fBswap\fR
+\fBswap_op\fR
 Swaps the top two elements of the stack.
 
 .TP
-\fBadd\fR
+\fBadd_op\fR
 Adds the top two elements of the stack.
 
 .TP
-\fBsub\fR
+\fBsub_op\fR
 Subtracts the top element of the stack from the second top element.
 
 .TP
-\fBmod\fR
+\fBmod_op\fR
 Computes the remainder of the division of the second top element by the top element.
 
 .TP
-\fBdiv\fR
+\fBdiv_op\fR
 Divides the second top element of the stack by the top element.
 
 .TP
-\fBmul\fR
+\fBmul_op\fR
 Multiplies the second top element of the stack with the top element.
 
 .SH IMPLEMENTATION DETAILS
