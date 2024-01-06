@@ -1,5 +1,5 @@
-
-# Monty Language Interpreter![Black and White Modern Thunder Twitch Panel](https://github.com/chloe0524/holbertonschool-monty/assets/127857895/ecd0988e-2c7d-4409-bd91-b8cc501ea8c1)
+![Black and White Modern Thunder Twitch Panel](https://github.com/chloe0524/holbertonschool-monty/assets/127857895/ecd0988e-2c7d-4409-bd91-b8cc501ea8c1)
+# Monty Language Interpreter
 
 
 This is an interpreter for the Monty programming language.
