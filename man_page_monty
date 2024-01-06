@@ -48,6 +48,22 @@ Swaps the top two elements of the stack.
 \fBadd\fR
 Adds the top two elements of the stack.
 
+.TP
+\fBsub\fR
+Subtracts the top element of the stack from the second top element.
+
+.TP
+\fBmod\fR
+Computes the remainder of the division of the second top element by the top element.
+
+.TP
+\fBdiv\fR
+Divides the second top element of the stack by the top element.
+
+.TP
+\fBmul\fR
+Multiplies the second top element of the stack with the top element.
+
 .SH IMPLEMENTATION DETAILS
 Each Monty bytecode command is implemented as a separate function. The \fBmain\fR function reads Monty bytecode from a file, tokenizes the commands, and executes them accordingly.
 
