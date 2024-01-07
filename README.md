@@ -39,7 +39,7 @@ This is an interpreter for the Monty programming language.
 
 ### Compilation
 ````
-~/holbertonschool-monty# gcc -Wall -Werror -Wextra -pedantic *.c -o monty
+gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 ````
 ### Execution
 Run the interpreter with a Monty bytecode file as an argument:
