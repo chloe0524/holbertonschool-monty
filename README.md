@@ -9,7 +9,7 @@ This is an interpreter for the Monty programming language.
 ## Details
 
 - Each Monty bytecode command is implemented as a separate function.
-- The `main` function reads Monty bytecode from a file, tokenizes the commands, and executes them accordingly.
+- The `main` function reads a Monty bytecode from a file and executes them accordingly.
 
 | Requirements           |                    |
 |------------------------|--------------------|
